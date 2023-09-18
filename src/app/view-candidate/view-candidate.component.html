@@ -1,0 +1,50 @@
+<div class="container">
+  <app-dashboard></app-dashboard>
+    <h2>View Candidate</h2>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Emp Id</th>
+          <th>Emp Name</th>
+          <th>E-mail</th>
+          <th>Project Name</th>
+          <th>Project Code</th>
+          <th>Project Manager</th>
+          <th>Project Location</th>
+          <th>Interviewed</th>
+          <th>Interview Date</th>
+          <th>Feedback</th>
+          <th>Feedback Description</th>
+          <th>Comments</th>
+          <th>Feedback Attachment</th>
+          <th>Proposed Date</th>
+          <th>Mentor Name</th>
+          <th>Status</th>
+          <th>Edit/Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidate of candidates">
+          <td>{{ candidate.empId }}</td>
+          <td>{{ candidate.employeeName }}</td>
+          <td>{{ candidate.email }}</td>
+          <td>{{ candidate.projectName }}</td>
+          <td>{{ candidate.projectCode }}</td>
+          <td>{{ candidate.projectManager }}</td>
+          <td>{{ candidate.projectLocation }}</td>
+          <td>{{ candidate.interviewed }}</td>
+          <td>{{ candidate.interviewDate }}</td>
+          <td>{{ candidate.feedback }}</td>
+          <td>{{ candidate.feedbackDescription }}</td>
+          <td>{{ candidate.comment }}</td>
+          <td>{{ candidate.feedbackAttachment }}</td>
+          <td>{{ candidate.proposedDate }}</td>
+          <td>{{ candidate.mentorName }}</td>
+          <td>{{ candidate.status }}</td>
+          <td><button id="edit">Edit</button><button id="delete" (click)="deleteCandidate(candidate)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

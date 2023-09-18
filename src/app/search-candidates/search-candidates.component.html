@@ -1,0 +1,63 @@
+<div class="container">
+  <app-dashboard></app-dashboard>
+  <h2>Search Candidate</h2>
+  
+  <!-- Dropdown for search criteria -->
+  <label for="searchBy">Search By:</label>
+  <select id="searchBy" [(ngModel)]="selectedSearchCriteria" (change)="onSearchCriteriaChange()">
+    <option value="empId">Emp Id</option>
+    <option value="empName">Emp Name</option>
+    <option value="email">E-mail</option>
+  </select>
+
+  <!-- Search input -->
+  <label for="searchValue">Enter {{ selectedSearchCriteria }}:</label>
+  <input id="searchValue" [(ngModel)]="searchValue" (input)="onSearchValueChange()" />
+  <button (click)="fetchCandidates()">Search</button>
+
+  <!-- Display search results -->
+  <table class="table" *ngIf="searchResults.length > 0">
+    <thead>
+      <tr>
+        <th>Emp Id</th>
+        <th>Emp Name</th>
+        <th>E-mail</th>
+        <th>Project Name</th>
+        <th>Project Code</th>
+        <th>Project Manager</th>
+        <th>Project Location</th>
+        <th>Interviewed</th>
+        <th>Interview Date</th>
+        <th>Feedback</th>
+        <th>Feedback Description</th>
+        <th>Comments</th>
+        <th>Feedback Attachment</th>
+        <th>Proposed Date</th>
+        <th>Mentor Name</th>
+        <th>Status</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidate of searchResults">
+        <td>{{ candidate.empId }}</td>
+        <td>{{ candidate.employeeName }}</td>
+        <td>{{ candidate.email }}</td>
+        <td>{{ candidate.projectName }}</td>
+        <td>{{ candidate.projectCode }}</td>
+        <td>{{ candidate.projectManager }}</td>
+        <td>{{ candidate.projectLocation }}</td>
+        <td>{{ candidate.interviewed }}</td>
+        <td>{{ candidate.interviewDate }}</td>
+        <td>{{ candidate.feedback }}</td>
+        <td>{{ candidate.feedbackDescription }}</td>
+        <td>{{ candidate.comment }}</td>
+        <td>{{ candidate.feedbackAttachment }}</td>
+        <td>{{ candidate.proposedDate }}</td>
+        <td>{{ candidate.mentorName }}</td>
+        <td>{{ candidate.status }}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>

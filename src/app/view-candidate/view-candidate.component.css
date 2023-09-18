@@ -1,0 +1,37 @@
+/* Style the container */
+.container {
+  /* Remove the max-width */
+  display: inline-table;
+}
+
+/* Style the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style the table header */
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Style the table rows */
+.table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Style alternate rows with a different background color */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect on rows */
+.table tbody tr:hover {
+  background-color: #ddd;
+}

@@ -1,0 +1,42 @@
+body {
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 100px;
+    background-color: #f2f2f2;
+}
+
+.text-bold {
+    font-weight: bold;
+    text-align: center;
+}
+
+.registration-form {
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 200px;
+    padding-left: 450px;
+    background-color: #fff;
+    
+}
+
+.control-label {
+    white-space: nowrap;
+}
+
+.controls {
+    overflow: hidden;
+}
+
+/* .input-xsmall {
+
+    width: -20px;
+
+} */
+
+.control-label{
+    display: flex;
+    left: 100px;
+}
